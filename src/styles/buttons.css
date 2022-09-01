@@ -1,17 +1,48 @@
-.button-default{
-    height: var(--size-1);
-    width: max-content;
-    padding: 0 var(--paddingInlineButton);
-    font-weight: var(--font-weight-1);
-    font-size: var(--font-text-1);
-    background-color: var(--color-grey-4);
-    border: 2px solid var(--color-grey-4);
-    color: var(--color-grey-2);
+/* BOTAO DO MENU */
+.button-menu{
+    padding: var(--radius-2);
+    background-color: var(--color-grey-1);
+    color: var(--white);
     border-radius: var(--radius-1);
-    cursor: pointer;
 }
-.button-default:hover{
-    background-color: var(--color-grey-3);
-    color: var(--color-grey-1);
-    border-color: var(--color-grey-3)
+.button-menu:hover{
+    background-color: var(--color-grey-2)
+}
+/* BOTAO TELA CADASTRO/LOGIN */
+.button-primary{
+    border-radius: var(--radius-1);
+    background-color: var(--color-brand-2);
+    padding: var(--padding-button-1);
+    color: white;
+    transition: .3s;
+}
+.button-primary:hover{
+    background-color: var(--color-brand-1);
+}
+/* BOTAO FINAL FORM DE CADASTRO/LOGIN */
+.button-outline{
+    border-radius: var(--radius-0);
+    background-color: var(--color-grey-5);
+    padding: var(--padding-button-1);
+    color:black;
+    border: 1px solid black;
+    transition: .3s;
+}
+.button-outline:hover{
+    color: var(--color-brand-1);
+    border: 1px solid var(--color-brand-1);
+}
+.button-outline:active{
+    background-color: var(--color-brand-1);
+    color: var(--white);
+}
+
+.button-grey1{
+    padding: var(--padding-button-1);
+    background-color: var(--color-grey-1);
+    color: var(--white);
+    border-radius: var(--radius-1);
+}
+.button-grey1:hover{
+    background-color: var(--color-grey-0) 
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script defer type="module" src="/index.js"></script>
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/fonts.css">
+    <link rel="stylesheet" href="/src/styles/menu.css">
+    <link rel="stylesheet" href="/src/styles/inputs.css">
+    <link rel="stylesheet" href="/src/styles/buttons.css">
+    <link rel="stylesheet" href="index.css">
+    <title>TechPosters</title>
+</head> 
+<body>
+    <header>
+        <div class="container">
+            <nav class="menu">
+                <h1 class="header__logo font-title-2">TechPosters</h1>
+                <div class="header__buttons font-text-2">
+                    <button class="button-menu" data-redirect-control="login">Login</button>
+                    <button class="button-menu" data-redirect-control="cadastro">Registro</button>
+                </div>
+            </nav>
+        </div> 
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="card card-login">
+                <h2 class="font-title-1">Login</h2>
+                <form class="input-group">
+                    <input  placeholder="Sua senha" type="email" name="email" required>
+                    <input  placeholder="Seu e-mail"  type="password" name="senha" required>
+                    <button class="button-primary font-text-button" type="submit">Logar</button>
+                </form>
+                <div class="card-redirect">
+                    <span class="font-text-3">Ainda não possui cadastro</span>
+                    <button class="button-outline font-text-button" data-redirect-control="cadastro">Ir para página de registro</button>
+                </div>
+            </div> 
+ 
+            <div class="card card-cadastro">
+                <div class="cadastro-header">
+                    <h2 class="font-title-1">Cadastro</h2>
+                    <button class="button-outline font-text-button" >Voltar</button>
+                </div>
+                <form class="input-group">
+                    <input  placeholder="Seu nome" type="text" name="nome" required>
+                    <input  placeholder="Sua senha" type="email" name="email" required>
+                    <input  placeholder="Seu e-mail"  type="password" name="senha" required>
+                    <input  placeholder="Qual o seu trabalho?" type="text" name="trabalho" required>
+                    <input  placeholder="URL da imagem de perfil" type="url" name="url" required>
+                    <button class="button-primary font-text-button" type="submit">Logar</button>
+                </form>
+                <div class="card-redirect">
+                    <span class="font-text-3">Já possui login</span>
+                    <button class="button-outline font-text-button" data-redirect-control="cadastro">Ir para página de login</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
