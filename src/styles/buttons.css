@@ -1,0 +1,17 @@
+.button-default{
+    height: var(--size-1);
+    width: max-content;
+    padding: 0 var(--paddingInlineButton);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-text-1);
+    background-color: var(--color-grey-4);
+    border: 2px solid var(--color-grey-4);
+    color: var(--color-grey-2);
+    border-radius: var(--radius-1);
+    cursor: pointer;
+}
+.button-default:hover{
+    background-color: var(--color-grey-3);
+    color: var(--color-grey-1);
+    border-color: var(--color-grey-3)
+}
