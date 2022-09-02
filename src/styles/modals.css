@@ -1,0 +1,67 @@
+.modalErro-wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+
+}
+.modalErro{
+    background-color: var(--color-brand-1);
+    position: absolute;
+    width: 90%;
+    max-width: 440px;
+    min-height: 190px;
+    padding: 32px 15px 24px 20px;
+    border-radius: var(--radius-2);
+    margin-top: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: modalErro-mobile 1s ease;
+}
+
+.modalErro .content .font-text-1{
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.modalErro .content .font-text-2{
+    color: var(--white);
+    word-break: break-word;
+}
+
+
+@media (min-width: 768px){
+    .modalErro{
+        margin: 0;
+        bottom: 45px;
+        right: 22px;
+        padding: 32px 20px 24px 20px;
+        animation: modalErro-desktop 1s ease;
+    }
+}
+
+@keyframes modalErro-mobile {
+    from{
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes modalErro-desktop {
+    from{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
