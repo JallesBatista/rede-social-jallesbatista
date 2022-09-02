@@ -7,15 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <script defer type="module" src="index.js"></script>
-    <link rel="stylesheet" href="/src/styles/reset.css">
-    <link rel="stylesheet" href="/src/styles/global.css">
-    <link rel="stylesheet" href="/src/styles/fonts.css">
-    <link rel="stylesheet" href="/src/styles/menu.css">
-    <link rel="stylesheet" href="/src/styles/inputs.css">
-    <link rel="stylesheet" href="/src/styles/buttons.css">
-    <link rel="stylesheet" href="index.css">
-    <title>TechPosters</title>
+<link rel="stylesheet" href="/src/styles/reset.css">
+<link rel="stylesheet" href="/src/styles/global.css">
+<link rel="stylesheet" href="/src/styles/fonts.css">
+<link rel="stylesheet" href="/src/styles/menu.css">
+<link rel="stylesheet" href="/src/styles/inputs.css">
+<link rel="stylesheet" href="/src/styles/buttons.css">
+<link rel="stylesheet" href="/src/styles/modals.css">
+<link rel="stylesheet" href="index.css">
+<script defer type="module" src="index.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<title>TechPosters</title>
 </head> 
 <body>
     <header>
@@ -35,8 +37,8 @@
             <div class="card card-login">
                 <h2 class="font-title-1">Login</h2>
                 <form class="input-group">
-                    <input  placeholder="Sua senha" type="email" name="email" required>
-                    <input  placeholder="Seu e-mail"  type="password" name="senha" required>
+                    <input  placeholder="Seu e-mail"  type="email" name="senha" id="email-login" required>
+                    <input  placeholder="Sua senha"  type="password" name="email" id="senha-login" required>
                     <button class="button-primary font-text-button" type="submit">Logar</button>
                 </form>
                 <div class="card-redirect">
@@ -49,13 +51,13 @@
                 <div class="cadastro-header">
                     <h2 class="font-title-1">Cadastro</h2>
                     <button class="button-outline font-text-button" data-redirect-control="login">Voltar</button>
-                </div>
+                </div> 
                 <form class="input-group">
-                    <input  placeholder="Seu nome" type="text" name="nome" required>
-                    <input  placeholder="Sua senha" type="email" name="email" required>
-                    <input  placeholder="Seu e-mail"  type="password" name="senha" required>
-                    <input  placeholder="Qual o seu trabalho?" type="text" name="trabalho" required>
-                    <input  placeholder="URL da imagem de perfil" type="url" name="url" required>
+                    <input  placeholder="Seu nome" type="text" name="nome" id="nome-cadastro" required>
+                    <input  placeholder="Seu e-mail"  type="email" name="senha" id="email-cadastro" required>
+                    <input  placeholder="Sua senha" type="password" name="email" id="senha-cadastro" required>
+                    <input  placeholder="Qual o seu trabalho?" type="text" name="job" id="job-cadastro" required>
+                    <input  placeholder="URL da imagem de perfil" type="url" name="url" id="url-cadastro" required>
                     <button class="button-primary font-text-button" type="submit">Registrar</button>
                 </form>
                 <div class="card-redirect">
@@ -65,6 +67,5 @@
             </div>
         </main>
     </div>
-    
 </body>
 </html>

@@ -5,6 +5,8 @@ header{
     width: 100%;
     padding: var(--padding-header);
     background-color: var(--color-grey-1);
+    position: sticky;
+    top: 0;
 }
 .container{
     width: 90%;

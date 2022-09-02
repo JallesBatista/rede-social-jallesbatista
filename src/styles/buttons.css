@@ -1,3 +1,10 @@
+/* CONFIG GLOBAL */
+button{
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.95);
+}
 /* BOTAO DO MENU */
 .button-menu{
     padding: var(--radius-2);
@@ -45,4 +52,17 @@
 }
 .button-grey1:hover{
     background-color: var(--color-grey-0) 
+}
+
+.button-modalErro{
+    display: flex;
+    align-self: flex-end;
+    color: black;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: var(--radius-1);
+    background-color: var(--white);
+}
+.button-modalErro:hover{
+    background-color: var(--color-grey-5)
 }
