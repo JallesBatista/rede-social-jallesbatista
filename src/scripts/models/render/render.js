@@ -32,4 +32,13 @@ export class Render{
       
         body.appendChild(divWrapper)
     }
+
+    static modalErroRemove(){
+        const modal = document.querySelector(".modalErro-wrapper")
+        const btnModal = document.querySelector(".button-modalErro")
+        btnModal.addEventListener("click", (event)=>{
+            modal.remove()
+        })
+    }
+
 }

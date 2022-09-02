@@ -1,7 +1,7 @@
 import { Render } from "../../scripts/models/render/render.js"
 import { Requests } from "../../scripts/models/requires/request.js"
 
-export class Home{
+class Home{
     static btnMenuVerif(){
         const btnMenuLogin  = document.querySelector(".button-menu--login")
         const btnMenuCadastro  = document.querySelector(".button-menu--cadastro ")
@@ -41,14 +41,6 @@ export class Home{
         })
 
     } 
-
-    static modalRemove(){
-        const modal = document.querySelector(".modalErro-wrapper")
-        const btnModal = document.querySelector(".button-modalErro")
-        btnModal.addEventListener("click", (event)=>{
-            modal.remove()
-        })
-    }
 
     static async loginCadastro(){
         const formLogin = document.querySelector(".card-login form")

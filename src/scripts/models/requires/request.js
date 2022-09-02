@@ -1,8 +1,5 @@
-import { Home } from "../../../pages/login-cadastro/index.js";
 import { instance } from "../axios.js";
 import { Render } from "../render/render.js";
-
-
 
 export class Requests {
     static async login(data){
@@ -17,7 +14,7 @@ export class Requests {
             .catch(err => {
                 console.log(err)
                 Render.modalErro("Credenciais Inválidas.")
-                Home.modalRemove()
+                Render.modalErroRemove()
             })
 
         return userLogin
@@ -33,7 +30,7 @@ export class Requests {
             .catch(err => {
                 console.log(err)
                 Render.modalErro(err.response.data.email[0])
-                Home.modalRemove()
+                Render.modalErroRemove()
             })
 
         return userCadastro

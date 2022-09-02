@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/reset.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/fonts.css" />
+  <link rel="stylesheet" href="/src/styles/menu.css" />
+  <link rel="stylesheet" href="/src/styles/inputs.css" />
+  <link rel="stylesheet" href="/src/styles/buttons.css" />
+  <link rel="stylesheet" href="/src/styles/flex.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script defer type="module" src="index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="menu">
+        <p class="header__logo font-title-2">TechPosters</p>
+        <div class="header__buttons font-text-2">
+          <button class="button-menu button-menu--logout" data-redirect-control="logout">
+            Sair
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="containerOrganize">
+
+      <main class="flex-column">
+        <div class="mainUser">
+          <div class="user__profile">
+            <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+            <div class="user__bio flex-column">
+              <p class="font-title-2">User Name</p>
+              <span class="font-text-2">User job</span>
+            </div>
+            <span class="mainUser__follows font-text-3">500 seguidores</span>
+          </div>
+
+          <form class="mainUser__message flex-column">
+            <input class="input-default font-text-1" placeholder="Digitar título do post" type="text" name="message"
+              id="" />
+            <textarea class="input-default font-text-1" placeholder="Digitar descrição do post" name="message"
+              id="message-content" cols="30" rows="10"></textarea>
+            <button class="button-primary font-text-button" type="submit">
+              Postar
+            </button>
+          </form>
+        </div>
+
+        <div class="profilesMobile">
+          <ul class="profilesRelated profilesMobile__list">
+            <li class="flex-column">
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <button class="button-outline font-text-button">Seguir</button>
+            </li>
+            <li class="flex-column">
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <button class="button-outline font-text-button">Seguir</button>
+            </li>
+            <li class="flex-column">
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <button class="button-outline font-text-button">Seguir</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="posts flex-column">
+          <h1 class="font-title-1">Posts</h1>
+          <ul class="posts__list flex-column">
+            <li class="post__item flex-column">
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <div class="post__content flex-column">
+                <h2 class="font-title-1">Titulo da postagem</h2>
+                <p class="font-text-1">
+                  Conteúdo da postagem Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Fuga magnam unde odio nemo quos iste
+                  officia quae voluptate, accusantium impedit exercitationem
+                  repudiandae nesciunt modi ullam non! Incidunt aliquam ab
+                  minus.
+                </p>
+              </div>
+              <div class="post__buttons">
+                <button class="button-grey1">Abrir Post</button>
+                <button class="button-like font-text-2">
+                  <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.7134 0C14.4034 0 12.3978 1.30143 11.3793 3.21286C10.3609 1.30143 8.35526 0 6.04526 0C2.70685 0 0 2.71857 0 6.07143C0 14.2857 11.3793 20 11.3793 20C11.3793 20 22.7586 14.2857 22.7586 6.07143C22.7586 2.71857 20.0518 0 16.7134 0Z"
+                      fill="#212529" fill-opacity="0.5" />
+                  </svg>
+                  <div class="number" id="number">50</div>
+                </button>
+              </div>
+            </li>
+            <li class="post__item flex-column">
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <div class="post__content flex-column">
+                <h2 class="font-title-1">Titulo da postagem</h2>
+                <p class="font-text-1">
+                  Conteúdo da postagem Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Fuga magnam unde odio nemo quos iste
+                  officia quae voluptate, accusantium impedit exercitationem
+                  repudiandae nesciunt modi ullam non! Incidunt aliquam ab
+                  minus.
+                </p>
+              </div>
+              <div class="post__buttons">
+                <button class="button-grey1">Abrir Post</button>
+                <button class="button-like font-text-2">
+                  <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.7134 0C14.4034 0 12.3978 1.30143 11.3793 3.21286C10.3609 1.30143 8.35526 0 6.04526 0C2.70685 0 0 2.71857 0 6.07143C0 14.2857 11.3793 20 11.3793 20C11.3793 20 22.7586 14.2857 22.7586 6.07143C22.7586 2.71857 20.0518 0 16.7134 0Z"
+                      fill="#212529" fill-opacity="0.5" />
+                  </svg>
+                  <div class="number" id="number">50</div>
+                </button>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </main>
+
+      <aside>
+        <div class="profilesDesktop">
+          <h3 class="font-title-2">Sugestões para você seguir</h3>
+          <ul class="profilesRelated profilesDesktop__list">
+            <li>
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <button class="button-outline font-text-button">Seguir</button>
+            </li>
+            <li>
+              <div class="user__profile">
+                <img src="/src/assets/EU BARBINHA.jpg" alt="" />
+                <div class="user__bio flex-column">
+                  <p class="font-title-2">User Name</p>
+                  <span class="font-text-2">User job</span>
+                </div>
+              </div>
+              <button class="button-outline font-text-button">Seguir</button>
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+
+</html>
