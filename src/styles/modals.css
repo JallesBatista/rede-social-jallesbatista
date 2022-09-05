@@ -47,6 +47,7 @@
 }
 .modalPost .post__content{
     overflow-y: scroll;
+    word-break: break-word;
 }
 .modalPost-button{
     position: absolute;
