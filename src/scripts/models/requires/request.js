@@ -17,7 +17,7 @@ export class Requests {
         const userLogin = await instance
             .post("/users/login/", data)
             .then((resp) => {
-                // console.log(resp)
+                console.log(resp)
                 localStorage.setItem("@kenzieRedeSocial:token", resp.data.token)
                 localStorage.setItem("@kenzieRedeSocial:userId", resp.data.user_uuid)
                 window.location.assign("/src/pages/dashboard/index.html")
@@ -36,7 +36,7 @@ export class Requests {
         const userCadastro = await instance
             .post("/users/", data)
             .then((resp) =>{
-                // console.log(resp)
+                console.log(resp)
                 return resp
             })
             .catch(err => {
@@ -53,7 +53,7 @@ export class Requests {
         const usersData = await instance
         .get(`/users/?limit=${limit}&offset=${offset}`)
         .then((resp) => {
-                // console.log(resp)
+                console.log(resp)
                 return resp
             })
             .catch((err)=> {
@@ -66,7 +66,7 @@ export class Requests {
         const userData = await instance
         .get(`/users/${this.userId}/`)
         .then((resp) => {
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch((err)=> {
@@ -79,7 +79,7 @@ export class Requests {
         const postsData = await instance
         .get(`/posts/?limit=${limit}&offset=${offset}`)
         .then((resp) => {
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch((err)=> {
@@ -92,7 +92,7 @@ export class Requests {
         const userPost = await instance
         .post("/posts/", data)
         .then((resp) =>{
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch(err => {
@@ -106,7 +106,7 @@ export class Requests {
         const postLike = await instance
         .post("/likes/", data)
         .then((resp) =>{
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch(err => {
@@ -120,7 +120,7 @@ export class Requests {
        await instance
         .delete(`/likes/${data}/`)
         .then((resp) =>{
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch(err => {
@@ -133,7 +133,7 @@ export class Requests {
         const userFollow = await instance
         .post("/users/follow/", data)
         .then((resp) =>{
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch(err => {
@@ -147,7 +147,7 @@ export class Requests {
         const userUnfollow = await instance
         .delete(`/users/unfollow/${data}/`, )
         .then((resp) =>{
-            // console.log(resp)
+            console.log(resp)
             return resp
         })
         .catch(err => {
