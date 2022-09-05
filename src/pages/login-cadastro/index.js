@@ -1,7 +1,10 @@
+import { token } from "../../scripts/models/axios.js"
 import { Render } from "../../scripts/models/render/render.js"
 import { Requests } from "../../scripts/models/requires/request.js"
+import { Verify } from "../../scripts/models/verify/verify.js"
 
 class Home{
+
     static btnMenuVerif(){
         const btnMenuLogin  = document.querySelector(".button-menu--login")
         const btnMenuCadastro  = document.querySelector(".button-menu--cadastro ")
@@ -45,7 +48,6 @@ class Home{
     static async loginCadastro(){
         const formLogin = document.querySelector(".card-login form")
         const formCadastro  = document.querySelector(".card-cadastro form")
-        const inputs  = document.querySelectorAll(".card .input-group")
 
         formLogin.addEventListener("submit", async(event)=>{
             event.preventDefault()
@@ -58,8 +60,6 @@ class Home{
             }
 
            await Requests.login(data)
-
-            
         })
 
         formCadastro.addEventListener("submit", async(event)=>{
@@ -79,28 +79,16 @@ class Home{
             }
 
            await Requests.cadastro(data)
-
-            
+           
         })
+
     }
 }
+Verify.loginCheck()
 
 Home.btnMenuVerif()
 Home.CadastroLoginToggle()
-
 Home.loginCadastro()
-let modeloLogin= {
-    "email": "teste@gmail.com", 
-    "password": "1234"
-}
-
-let modeloCadastro= {
-    "username": "testeacasaasd", 
-    "email": "testeabcasdmkasdkjd@gmail.com",
-    "password": "1234",
-    "work_at": "Develop",
-    "image": "https://picsum.photos/200/300"
-}
 
 // Requests.login(modeloLogin)
 // Requests.cadastro(modeloCadastro)

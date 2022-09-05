@@ -1,6 +1,7 @@
 :root {
   --color-brand-1: #4263EB;
   --color-brand-2: #364FC7;
+  --color-like: #D7443E;
 
   --color-grey-0: #0A0C0D;
   --color-grey-1: #212529;
@@ -47,4 +48,16 @@
 
   --container-1: 1200px;
   --container-2: 900px; 
+}
+/* BARRA DE ROLAGEM */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
