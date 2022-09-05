@@ -1,0 +1,29 @@
+.font-title-1{
+    font-size: var(--font-title-1);
+    font-weight: var(--font-weight-1);
+    line-height: 40px;
+}
+.font-title-2{
+    font-size: var(--font-title-2);
+    font-weight: var(--font-weight-2);
+    line-height: 24px;
+}
+.font-text-1{
+    font-size: var(--font-text-1);
+    font-weight: var(--font-weight-3);
+    line-height: 28px; 
+}
+.font-text-2{
+    font-size: var(--font-text-2);
+    font-weight: var(--font-weight-3);
+    line-height: 16px;
+}
+.font-text-3{
+    font-size: var(--font-text-3);
+    font-weight: var(--font-weight-3);
+    line-height: 16px;
+}
+.font-text-button{
+    font-size: var(--font-text-2);
+    font-weight: var(--font-weight-2);
+}

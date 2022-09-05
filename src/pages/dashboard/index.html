@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/reset.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/fonts.css" />
+  <link rel="stylesheet" href="/src/styles/menu.css" />
+  <link rel="stylesheet" href="/src/styles/inputs.css" />
+  <link rel="stylesheet" href="/src/styles/buttons.css" />
+  <link rel="stylesheet" href="/src/styles/modals.css" />
+  <link rel="stylesheet" href="/src/styles/flex.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script defer type="module" src="index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="menu">
+        <p class="header__logo font-title-2">TechPosters</p>
+        <div class="header__buttons font-text-2">
+          <button class="button-menu button-menu--logout" data-redirect-control="logout">
+            Sair
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="containerOrganize">
+
+      <main class="flex-column">
+        <div class="mainUser">
+          <div class="user__profile">
+          </div>
+
+          <form class="mainUser__message flex-column">
+            <input class="input-default font-text-1" placeholder="Digitar título do post" type="text" name="message"
+              id="message-title" />
+            <textarea class="input-default font-text-1" placeholder="Digitar descrição do post" name="message"
+              id="message-content" cols="30" rows="10"></textarea>
+            <button class="button-primary font-text-button" type="submit">
+              Postar
+            </button>
+          </form>
+        </div>
+
+        <div class="profilesMobile">
+          <ul class="profilesRelated profilesMobile__list">
+          </ul>
+        </div>
+
+        <div class="posts flex-column">
+          <h1 class="font-title-1">Posts</h1>
+          <ul class="posts__list flex-column">
+          </ul>
+        </div>
+      </main>
+
+      <aside>
+        <div class="profilesDesktop">
+          <h3 class="font-title-2">Sugestões para você seguir</h3>
+          <ul class="profilesRelated profilesDesktop__list">
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+
+</html>

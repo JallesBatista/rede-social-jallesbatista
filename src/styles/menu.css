@@ -1,0 +1,29 @@
+body{
+    background-color: var(--color-grey-5);
+}
+header{
+    width: 100%;
+    padding: var(--padding-header);
+    background-color: var(--color-grey-1);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: var(--container-1);
+}
+.header__logo{
+    color: var(--white);
+}
+.header__buttons{
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
