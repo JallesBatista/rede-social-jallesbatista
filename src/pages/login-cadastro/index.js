@@ -1,5 +1,3 @@
-import { token } from "../../scripts/models/axios.js"
-import { Render } from "../../scripts/models/render/render.js"
 import { Requests } from "../../scripts/models/requires/request.js"
 import { Verify } from "../../scripts/models/verify/verify.js"
 
@@ -89,7 +87,4 @@ Verify.loginCheck()
 Home.btnMenuVerif()
 Home.CadastroLoginToggle()
 Home.loginCadastro()
-
-// Requests.login(modeloLogin)
-// Requests.cadastro(modeloCadastro)
 
