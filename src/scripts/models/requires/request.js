@@ -31,8 +31,9 @@ export class Requests {
 
         return userLogin
     }
-
-    static async cadastro(data){
+    // Por algum erro na api, ela ta levando em conta o authorization no header dessa solicitação sendo que nao precisa
+    // ja que não teria token, logo pelo axios não tava indo.
+    static async cadastroAxios(data){
         const userCadastro = await instance
             .post("/users/", data)
             .then((resp) =>{
@@ -42,8 +43,31 @@ export class Requests {
             .catch(err => {
                 console.log(err)
                 Render.modalErro(err.response.data.email[0])
-                Render.modalErroRemove()
+                Render.modalRemove()
             })
+
+        return userCadastro
+    }
+
+    static async cadastro(data){
+        const userCadastro = await fetch("https://m2-rede-social.herokuapp.com/api/users/", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(resp=> {
+            if(resp.status == 201){
+                window.location.assign("/src/pages/login-cadastro/index.html")
+            }else if(resp.status == 400){
+                Render.modalErro("Já existe um usuário com o mesmo email cadastrado")
+                Render.modalRemove()
+            }
+            return resp.json()
+        })
+        .then(resp => console.log(resp))
+        .catch(err => console.log(err))
 
         return userCadastro
     }
@@ -66,7 +90,7 @@ export class Requests {
         const userData = await instance
         .get(`/users/${this.userId}/`)
         .then((resp) => {
-            console.log(resp)
+            // console.log(resp)
             return resp
         })
         .catch((err)=> {
@@ -79,7 +103,7 @@ export class Requests {
         const postsData = await instance
         .get(`/posts/?limit=${limit}&offset=${offset}`)
         .then((resp) => {
-            console.log(resp)
+            // console.log(resp)
             return resp
         })
         .catch((err)=> {
