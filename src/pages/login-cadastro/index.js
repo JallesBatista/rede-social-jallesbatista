@@ -57,7 +57,7 @@ class Home{
                 password: senhaLogin.value
             }
 
-           await Requests.login(data)
+          Requests.login(data)
         })
 
         formCadastro.addEventListener("submit", async(event)=>{
@@ -69,14 +69,13 @@ class Home{
             const cadastroUrl = document.getElementById("url-cadastro")
 
             const data = {
-                username: `${cadastroNome.value}`, 
-                email: `${cadastroEmail.value}`,
-                password: `${cadastroSenha.value}`,
-                work_at: `${cadastroJob.value}`,
-                image: `${cadastroUrl.value}`
+                username: cadastroNome.value, 
+                email: cadastroEmail.value,
+                password: cadastroSenha.value,
+                work_at: cadastroJob.value,
+                image: cadastroUrl.value
             }
-
-           await Requests.cadastro(data)
+           Requests.cadastro(data)
            
         })
 
