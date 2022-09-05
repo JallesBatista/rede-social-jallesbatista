@@ -1,0 +1,127 @@
+body{
+    background-color: white;
+}
+aside{
+    display: none;
+}
+.containerOrganize{
+    margin-top: 50px;
+}
+/* PERFIS GERAIS */
+.user__profile{
+    display: flex; 
+}
+.user__profile img{
+    width: 52px;
+    height: 52px;
+    min-height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    margin-right: 12px;
+    overflow: hidden;
+}
+.user__bio{
+    justify-content: space-around;
+    min-width: max-content;
+}
+/* PERFIL PRINCIPAL DO USUARIO */
+.mainUser__follows{
+    margin: 6px
+}
+.mainUser__message{
+    gap: 22px;
+    margin: 40px 0;
+}
+.mainUser__message textarea{
+    resize: none;
+    height: 130px;
+}
+.mainUser__message .button-primary{
+    padding: var(--padding-button-3);
+    width: fit-content;
+    align-self: flex-end;
+}
+/* TODAS AS DIVS COM OS PERFIS */
+.profilesRelated button{
+    padding: var(--padding-button-2);
+}
+.profilesMobile{
+    margin-bottom: 40px;
+}
+.profilesMobile__list{
+    display: flex;
+    overflow-x: scroll ;
+    gap: 60px;
+}
+.profilesMobile__list li{
+    gap: 20px;
+    align-items: flex-start;
+}
+.posts__list{
+    margin: 50px 0;
+    gap: 52px;
+}
+.post__item{
+    gap: 32px;
+}
+.post__content{
+    gap: 20px;
+}
+.posts__list .post__content p{
+    word-wrap: break-word;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.post__buttons{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.post__buttons .button-grey1{
+    padding: var(--padding-button-3);
+}
+.liked path{
+   fill: #D7443E;
+   fill-opacity: 1;
+}
+
+@media (min-width: 768px){
+    .containerOrganize{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    main{
+        width: 60%;
+    }
+    .profilesMobile{
+        display: none;
+    }
+    aside{
+        display: block;
+        min-width: 270px;
+        max-width: 420px;
+        width: 40%;
+    }
+    .profilesDesktop{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        position: sticky;
+        top: 150px;
+        z-index: 1;
+    }
+    .profilesDesktop__list{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .profilesDesktop__list li{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+}

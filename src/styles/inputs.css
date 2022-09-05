@@ -1,26 +1,17 @@
 .input-default{
-    height: var(--size-1);
-    width: 100%;
+    border: 2px solid var(--color-grey-4);
+    padding: var(--padding-input-1);
     border-radius: var(--radius-1);
-    background-color: var(--color-white);
-    padding: 0 var(--paddingLeft);
-    font-size: var(--font-text-1);
+    height: 52px;
 } 
+.input-default::placeholder{
+    font-size: var(--font-text-1);
+    font-weight: var(--font-weight-3);
+}
 
 .card .input-group{
     display: flex;
     flex-direction: column;
     gap: var(--gap-4);
     margin-top: 30px;
-}
-.card .input-group input{
-    width: 100%;
-    border: 2px solid var(--color-grey-4);
-    padding: var(--padding-input-1);
-    border-radius: var(--radius-1);
-    height: 52px;
-}
-.card .input-group input::placeholder{
-    font-size: var(--font-text-1);
-    font-weight: var(--font-weight-3);
 }

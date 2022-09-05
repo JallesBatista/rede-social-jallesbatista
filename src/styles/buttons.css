@@ -4,8 +4,8 @@ button{
 }
 button:active{
     transform: scale(0.95);
+    transition: .3s;
 }
-/* BOTAO DO MENU */
 .button-menu{
     padding: var(--radius-2);
     background-color: var(--color-grey-1);
@@ -15,25 +15,23 @@ button:active{
 .button-menu:hover{
     background-color: var(--color-grey-2)
 }
-/* BOTAO TELA CADASTRO/LOGIN */
 .button-primary{
     border-radius: var(--radius-1);
     background-color: var(--color-brand-2);
     padding: var(--padding-button-1);
     color: white;
-    transition: .3s;
+
 }
 .button-primary:hover{
     background-color: var(--color-brand-1);
 }
-/* BOTAO FINAL FORM DE CADASTRO/LOGIN */
 .button-outline{
     border-radius: var(--radius-0);
     background-color: var(--color-grey-5);
     padding: var(--padding-button-1);
     color:black;
     border: 1px solid black;
-    transition: .3s;
+    
 }
 .button-outline:hover{
     color: var(--color-brand-1);
@@ -43,7 +41,6 @@ button:active{
     background-color: var(--color-brand-1);
     color: var(--white);
 }
-
 .button-grey1{
     padding: var(--padding-button-1);
     background-color: var(--color-grey-1);
@@ -53,16 +50,25 @@ button:active{
 .button-grey1:hover{
     background-color: var(--color-grey-0) 
 }
-
 .button-modalErro{
     display: flex;
     align-self: flex-end;
     color: black;
     font-weight: 600;
-    padding: 10px 12px;
+    padding: var(--padding-button-3);
     border-radius: var(--radius-1);
     background-color: var(--white);
 }
 .button-modalErro:hover{
     background-color: var(--color-grey-5)
+}
+.button-like{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.button-like:hover path{
+    fill-opacity: 1;
+    fill: var(--color-like);
 }
